@@ -52,6 +52,12 @@
 						<i class="zmdi zmdi-mail-send"></i> Login
 						</button>
 						
+						<br>
+						<a href="#" onClick="gps();" class="ui-btn ui-btn-raised clr-primary waves-effect waves-button waves-effect waves-button">GPS</a>
+						
+						<br>
+						<a onclick="camera();" class="ui-btn ui-btn-raised clr-primary waves-effect waves-button waves-effect waves-button">Camera</a>
+						
 						<div id="msg" style="display: none;color: rgb(244,67,54);text-align: center;"></div>
 						
                         </div>
@@ -857,8 +863,22 @@
 
 		<script src="js/jquery.min.js"></script>
 		
+<script type="text/javascript">
+ 
+ document.addEventListener("deviceready", onDeviceReady, false);
+ //alert('ok');
+ //$.mobile.fixedToolbars.show(true);
+ 
+ function onDeviceReady() 
+ {
+	alert(device.uuid);
+ 
+	  console.log("Entering index.html.onDeviceReady");
+	  //var element = document.getElementById('deviceProperties');
 
-		
+ }	
+</script>		
+
 <script>
 
 $(document).on('pageinit',  function()
@@ -1445,6 +1465,51 @@ function DestSubChange()
 } 	
 		</script>
 		
+<script type="text/javascript">
+ 
+	
+  var GpsonSuccess = function(position) {
+        alert('Latitude: '          + position.coords.latitude          + '\n' +
+              'Longitude: '         + position.coords.longitude         + '\n' +
+              'Altitude: '          + position.coords.altitude          + '\n' +
+              'Accuracy: '          + position.coords.accuracy          + '\n' +
+              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+              'Heading: '           + position.coords.heading           + '\n' +
+              'Speed: '             + position.coords.speed             + '\n' +
+              'Timestamp: '         + position.timestamp                + '\n');
+    };
 
+    // onError Callback receives a PositionError object
+    //
+    function GpsonError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+	
+	function CameraonSuccess(imageURI) {
+		var image = document.getElementById('myImage');
+		image.src = imageURI;
+	}
+
+	function CameraonFail(message) {
+		alert('Failed because: ' + message);
+	}	
+	
+	function gps()
+	{
+		alert('in gps');
+		    navigator.geolocation.getCurrentPosition(GpsonSuccess, GpsonError);
+
+	}
+
+	function camera()
+	{
+		alert('in camera');
+		
+		navigator.camera.getPicture(CameraonSuccess, CameraonFail, { quality: 50,
+    destinationType: Camera.DestinationType.FILE_URI });
+	}	
+	</script>
+		
 	</body>
 </html>
