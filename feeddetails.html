@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mahavitaran Mobile App : Feederwise Interruption Details</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.min.css" />
+		<link rel="stylesheet" href="vendor/waves/waves.min.css" />
+		<link rel="stylesheet" href="vendor/wow/animate.css" />
+		<link rel="stylesheet" href="css/nativedroid2.css" />
+
+		<meta name="mobile-web-app-capable" content="yes">
+	 	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+	</head>
+	<body>
+
+		<div data-role="page">
+
+			<!--<nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>-->
+
+			<!--<div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+				<nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
+			</div>-->
+
+			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+				<!--<a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>-->
+				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>Register Feeder Outage</h1>
+			</div>
+
+			<div role="main" class="ui-content" data-inset="false">
+				<h4>Feederwise Interruption Details</h4>
+
+				<form>
+					<label for="select-choice-1b" class="select">Bill Unit*</label>
+                    <select name="select-choice-1" id="select-choice-1b" data-native-menu="false">
+                        <option value="javascript">--Select--</option>
+                        <option value="css">CSS</option>
+                        <option value="html">HTML</option>
+                        <option value="csharp">C#</option>
+                        <option value="java">Java</option>
+                    </select>
+
+                    <label for="select-choice-1b" class="select">Sub station*</label>
+                    <select name="select-choice-1" id="select-choice-1b" data-native-menu="false">
+                        <option value="javascript">--Select--</option>
+                        <option value="css">CSS</option>
+                        <option value="html">HTML</option>
+                        <option value="csharp">C#</option>
+                        <option value="java">Java</option>
+                    </select>
+
+                    <label for="select-choice-1b" class="select">Feeder*</label>
+                    <select name="select-choice-1" id="select-choice-1b" data-native-menu="false">
+                        <option value="javascript">--Select--</option>
+                        <option value="css">CSS</option>
+                        <option value="html">HTML</option>
+                        <option value="csharp">C#</option>
+                        <option value="java">Java</option>
+                    </select>
+
+                    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <legend>Type*</legend>
+                        <input type="radio" name="radio-choice-1" id="radio-choice-1b" value="choice-1" checked="checked">
+                        <label for="radio-choice-1b">Planned</label>
+                        <input type="radio" name="radio-choice-1" id="radio-choice-2b" value="choice-2">
+                        <label for="radio-choice-2b">Forced</label>
+                	</fieldset>
+
+                	<label for="select-choice-1b" class="select">Reason*</label>
+                    <select name="select-choice-1" id="select-choice-1b" data-native-menu="false">
+                        <option value="javascript">Planned Load</option>
+                        <option value="css">CSS</option>
+                        <option value="html">HTML</option>
+                        <option value="csharp">C#</option>
+                        <option value="java">Java</option>
+                    </select>
+
+                    <label for="inputDatetime">Start Date-Time*</label>
+                    <input type="datetime" name="inputDatetime" id="inputDatetime" value="" data-clear-btn="true" placeholder="">
+
+                    <label for="inputDatetime">Expected End Date-Time*</label>
+                    <input type="datetime" name="inputDatetime" id="inputDatetime" value="" data-clear-btn="true" placeholder="">
+
+					<label for="textarea2b">Remark</label>
+	                <textarea cols="40" rows="8" name="textarea2" id="textarea2b" placeholder="This is a textarea"></textarea>
+
+	                <input class="ui-btn clr-primary" type="submit" name="submit" value="submit" >
+					
+				</form>
+
+			</div>
+
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery.mobile.min.js"></script>
+		<script src="vendor/waves/waves.min.js"></script>
+		<script src="vendor/wow/wow.min.js"></script>
+		<script src="js/nativedroid2.js"></script>
+		<script src="nd2settings.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+		//alert('hello');
+			var test2 = localStorage.getItem("session_id_result1");
+			//alert(test2);
+
+			//test = JSON.parse(test2); //var test is now re-loaded!
+
+			//alert(test.length);
+			//for(j = 0; j<test.length; j++)
+			//{
+			//officecode = test.LocationID;
+			//officetype = test.OfficeType;
+			//alert(officecode + ' ' + officetype);
+			//alert(officetype);
+			
+			url = 'http://mobileapp.mahadiscom.in/Emp_App_Request/GetAccess/SubStationFeeder';
+			//url = 'Emp_App_Request/GetAccess/SubStationFeeder';
+			purl = 'http://localhost/discom/t.php';
+			console.log(url);//return false;
+			
+			var appname = "EMPAPP";
+			
+			officecode = '511' ;
+			officetype = '2' ;
+			
+			$.ajax({
+				url: purl,
+				data: {url: url, officecode: officecode,officetype: officetype},
+				type: 'post',                   
+				async: 'true',
+				dataType: 'json',
+				beforeSend: function() {
+					// This callback function will trigger before data is sent
+					//$.mobile.showPageLoadingMsg(true); // This will show ajax spinner
+					//$.mobile.loading( "show" );
+					alert('before');
+				},
+				complete: function() {
+					// This callback function will trigger on data sent/received complete
+				   // $.mobile.hidePageLoadingMsg(); // This will hide ajax spinner
+					//$.mobile.loading( "hide" );
+					alert('complete');
+				},
+				success: function (result) {
+					alert('aa');
+					//alert("login done");
+
+						alert("Data fetching done");
+
+						result_string = JSON.stringify(result);
+
+						alert(result_string);
+
+						localStorage.setItem("session_bu", result_string);
+
+						var test2 = localStorage.getItem("session_bu");
+						//alert(test2);
+						test = JSON.parse(test2); //var test is now re-loaded!
+
+						//alert(test.length);
+						//for(j = 0; j<test.length; j++)
+						//{
+							alert(test[0].BU);
+						//}
+						//$.mobile.changePage( "main.html",null, true, true);
+						//$(":mobile-pagecontainer").pagecontainer("change", "main.html", { options });
+						
+				},
+				error: function (request,error) {
+					// This callback function will trigger on unsuccessful action                
+					console.log('Please check your data connection!');
+					alert('Please check your data connection! ' + error);
+				}
+			});  
+			
+		
+
+});
+		
+		</script>		
+	</body>
+</html>

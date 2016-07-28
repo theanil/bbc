@@ -6,9 +6,9 @@
 /*@import url("nativedroid2.color.purple.css");*/
 /*@import url("nativedroid2.color.deep-purple.css");*/
 /*@import url("nativedroid2.color.indigo.css");*/
-/*@import url("nativedroid2.color.light-blue.css");*/
+@import url("nativedroid2.color.light-blue.css");
 /*@import url("nativedroid2.color.cyan.css");*/
-@import url("nativedroid2.color.teal.css");
+/*@import url("nativedroid2.color.teal.css");*/
 /*@import url("nativedroid2.color.green.css");*/
 /*@import url("nativedroid2.color.light-green.css");*/
 /*@import url("nativedroid2.color.lime.css");*/
@@ -558,11 +558,12 @@ code {
 
 .ui-header .ui-title, .ui-footer .ui-title {
 	text-align: left;
-	margin: 0px 72px;
+	margin: 0px 0px;
 	font-size: 20px;
 	line-height: 1.8em;
 	font-weight: 400;
 	letter-spacing: 0.005em;
+	text-align: center;
 }
 
 .ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited,

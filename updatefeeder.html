@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mahavitaran Mobile App : Update Feeder</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.min.css" />
+		<link rel="stylesheet" href="vendor/waves/waves.min.css" />
+		<link rel="stylesheet" href="vendor/wow/animate.css" />
+		<link rel="stylesheet" href="css/nativedroid2.css" />
+
+		<meta name="mobile-web-app-capable" content="yes">
+	 	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+	</head>
+	<body>
+
+		<div data-role="page">
+
+			<!--<nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>-->
+
+			<!--<div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+				<nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
+			</div>-->
+
+			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+				<!--<a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>-->
+				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>Update Feeder Outage</h1>
+			</div>
+
+			<div role="main" class="ui-content" data-inset="false">
+				<h5>Update Feederwise Interruption Details</h5>
+
+				<form>
+					<label for="select-choice-1b" class="select">Bill Unit*</label>
+                    <select name="select-choice-1" id="select-choice-1b" data-native-menu="false">
+                        <option value="javascript">--Select--</option>
+                        <option value="css">CSS</option>
+                        <option value="html">HTML</option>
+                        <option value="csharp">C#</option>
+                        <option value="java">Java</option>
+                    </select>
+
+                    <label for="select-choice-1b" class="select">Sub station*</label>
+                    <select name="select-choice-1" id="select-choice-1b" data-native-menu="false">
+                        <option value="javascript">--Select--</option>
+                        <option value="css">CSS</option>
+                        <option value="html">HTML</option>
+                        <option value="csharp">C#</option>
+                        <option value="java">Java</option>
+                    </select>
+
+                    <label for="select-choice-1b" class="select">Feeder*</label>
+                    <select name="select-choice-1" id="select-choice-1b" data-native-menu="false">
+                        <option value="javascript">--Select--</option>
+                        <option value="css">CSS</option>
+                        <option value="html">HTML</option>
+                        <option value="csharp">C#</option>
+                        <option value="java">Java</option>
+                    </select>
+
+	                <input class="ui-btn clr-primary" type="submit" name="submit" value="Get Outage Information" >
+					
+				</form>
+
+			</div>
+
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery.mobile.min.js"></script>
+		<script src="vendor/waves/waves.min.js"></script>
+		<script src="vendor/wow/wow.min.js"></script>
+		<script src="js/nativedroid2.js"></script>
+		<script src="vendor/nd2settings.js"></script>
+
+	</body>
+</html>
