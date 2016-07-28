@@ -1,0 +1,571 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>nativeDroid II - jQueryMobile Template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="font-awesome.min.css" />
+		<link rel="stylesheet" href="vendor/jquerymobile/jquery.mobile.min.css" />
+		<link rel="stylesheet" href="vendor/waves/waves.min.css" />
+		<link rel="stylesheet" href="vendor/wow/animate.css" />
+		<link rel="stylesheet" href="css/nativedroid2.css" />
+
+		<style>
+			/* Prevent FOUC */
+			body { opacity: 0; }
+		</style>
+
+	</head>
+	<body>
+
+		<div data-role="page" class="nd2-no-menu-swipe" id="login">
+
+			<nd2-include data-src="panel.left.html"></nd2-include>
+
+			<div data-role="header" data-position="fixed" class="wow fadeIn">
+				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>Login</h1>
+			</div>
+
+			<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+
+
+				<form method="post" action="">
+
+
+				<div class="row">
+
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						
+
+                    </div>
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="box">
+
+						<label for="username2">Username:</label>
+                        <input type="text" name="username2" id="username2" data-clear-btn="true" placeholder="" value="02620651">
+
+						<label for="password">Password:</label>
+                        <input type="password" name="password" id="password" data-clear-btn="true" placeholder="" value="Password@123">
+
+						<button id="submit_login2" class="ui-btn ui-btn-raised clr-primary waves-effect waves-button waves-effect waves-button">
+						<i class="zmdi zmdi-mail-send"></i> Login
+						</button>
+						
+						<br>
+						<a href="#" onClick="gps();" class="ui-btn ui-btn-raised clr-primary waves-effect waves-button waves-effect waves-button">GPS</a>
+						
+						<br>
+						<a onclick="camera();" class="ui-btn ui-btn-raised clr-primary waves-effect waves-button waves-effect waves-button">Camera</a>
+
+
+						<div id="msg" style="display: none;color: rgb(244,67,54);text-align: center;"></div>
+						
+                        </div>
+
+                    </div>
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						
+
+                    </div>
+				</div>
+
+				</form>
+
+
+			</div>
+
+		</div>
+		
+		<div data-role="page" class="jqm-demos" id="main" data-title="APP">
+
+			<nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
+
+			<div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+				<nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
+			</div>
+
+			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+				<a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
+				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>Employee Mitra</h1>
+			</div>
+
+			<div role="main" class="ui-content" data-inset="false">
+				<div class="nd2-card">
+
+
+					<div class="card-supporting-text">
+						Name : <strong>Mr.Kaustubh Wasave</strong><br>
+						CPF : <strong>02665549Wasave</strong><br>
+						Design : <strong>Assistant Engineer(Distribution)</strong><br>
+						Office : <strong>000</strong>
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="col-xs-6">
+						<div class="box">
+
+
+							<!-- Media Overlay no Background !-->
+
+							<div class="nd2-card">
+
+
+								<div class="card-media">
+									<a href="#feeddetails"><img src="img/capture.jpg"></a>
+
+									<!--<div class='card-media-overlay'>
+
+										<div class="card-title has-supporting-text">
+											<h3 class="card-primary-title">Capture GeoCoordinates</h3>
+										</div>
+
+									</div>-->
+
+								</div>
+
+
+								<!--<div class="card-action">
+									<div class="row between-xs">
+										<div class="col-xs-12 align-right">
+											<div class="box">
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-favorite'></i></a>
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-bookmark'></i></a>
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mail-reply zmd-flip-horizontal'></i></a>
+											</div>
+										</div>
+									</div>
+								</div>-->
+
+							</div>
+
+
+						</div>
+					</div>
+
+					<div class="col-xs-6">
+						<div class="box">
+
+							<!-- Media Overlay no Background !-->
+
+							<div class="nd2-card">
+
+
+								<div class="card-media">
+									<a href="outage.html"><img src="img/outmanage.jpg"></a>
+
+									<!--<div class='card-media-overlay'>
+
+										<div class="card-title has-supporting-text">
+											<h3 class="card-primary-title">Outage Management</h3>
+										</div>
+
+									</div>-->
+
+								</div>
+
+
+								<!--<div class="card-action">
+									<div class="row between-xs">
+										<div class="col-xs-12 align-right">
+											<div class="box">
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-favorite'></i></a>
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-bookmark'></i></a>
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mail-reply zmd-flip-horizontal'></i></a>
+											</div>
+										</div>
+									</div>
+								</div>-->
+
+							</div>
+
+
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="row">
+
+					<div class="col-xs-6">
+						<div class="box">
+
+
+							<!-- Media Overlay no Background !-->
+
+							<div class="nd2-card">
+
+
+								<div class="card-media">
+									<a href="feederload.html"><img src="img/load.jpg"></a>
+
+									<!--<div class='card-media-overlay'>
+
+										<div class="card-title has-supporting-text">
+											<h3 class="card-primary-title">Load Management</h3>
+										</div>
+
+									</div>-->
+
+								</div>
+
+
+								<!--<div class="card-action">
+									<div class="row between-xs">
+										<div class="col-xs-12 align-right">
+											<div class="box">
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-favorite'></i></a>
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-bookmark'></i></a>
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mail-reply zmd-flip-horizontal'></i></a>
+											</div>
+										</div>
+									</div>
+								</div>-->
+
+							</div>
+
+
+						</div>
+					</div>
+
+					<div class="col-xs-6">
+						<div class="box">
+
+							<!-- Media Overlay no Background !-->
+
+							<div class="nd2-card">
+
+
+								<div class="card-media">
+									<a href="feederreading.html"><img src="img/feeder.jpg"></a>
+
+									<!--<div class='card-media-overlay'>
+
+										<div class="card-title has-supporting-text">
+											<h3 class="card-primary-title">Feeder Reading</h3>
+										</div>
+
+									</div>-->
+
+								</div>
+
+
+								<!--<div class="card-action">
+									<div class="row between-xs">
+										<div class="col-xs-12 align-right">
+											<div class="box">
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-favorite'></i></a>
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-bookmark'></i></a>
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mail-reply zmd-flip-horizontal'></i></a>
+											</div>
+										</div>
+									</div>
+								</div>-->
+
+							</div>
+
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="col-xs-6">
+						<div class="box">
+
+
+							<!-- Media Overlay no Background !-->
+
+							<div class="nd2-card">
+
+
+								<div class="card-media">
+									<a href="disconnection.html"><img src="img/disconnection.jpg"></a>
+
+									<!--<div class='card-media-overlay'>
+
+										<div class="card-title has-supporting-text">
+											<h3 class="card-primary-title">Disconnection Management</h3>
+										</div>
+
+									</div>-->
+
+								</div>
+
+
+								<!--<div class="card-action">
+									<div class="row between-xs">
+										<div class="col-xs-12 align-right">
+											<div class="box">
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-favorite'></i></a>
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-bookmark'></i></a>
+												<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mail-reply zmd-flip-horizontal'></i></a>
+											</div>
+										</div>
+									</div>
+								</div>-->
+
+							</div>
+
+
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+
+		</div>
+
+		<div data-role="page" class="jqm-demos" id="feeddetails" data-title="APP">
+
+		<!--<nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>-->
+
+			<!--<div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+				<nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
+			</div>-->
+
+			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+				<!--<a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>-->
+				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>Register Feeder Outage</h1>
+			</div>
+
+			<div role="main" class="ui-content" data-inset="false">
+				<h4>Feederwise Interruption Details</h4>
+
+				<form>
+					<label for="bu_id" class="select">Bill Unit*</label>
+                    <select name="bu_id" id="bu_id" data-native-menu="false" onChange="BUChange();">
+
+                    </select>
+
+                    <label for="sub_id" class="select">Sub station*</label>
+                    <select name="sub_id" id="sub_id" data-native-menu="false" onChange="SubChange();">
+
+                    </select>
+
+                    <label for="feed_id" class="select">Feeder*</label>
+                    <select name="feed_id" id="feed_id" data-native-menu="false">
+
+                    </select>
+
+                    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <legend>Type*</legend>
+                        <input type="radio" name="radio-choice-1" id="radio-choice-1b" value="choice-1" checked="checked">
+                        <label for="radio-choice-1b">Planned</label>
+                        <input type="radio" name="radio-choice-1" id="radio-choice-2b" value="choice-2">
+                        <label for="radio-choice-2b">Forced</label>
+                	</fieldset>
+
+                	<label for="select-choice-1b" class="select">Reason*</label>
+                    <select name="select-choice-1" id="select-choice-1b" data-native-menu="false">
+                        <option value="javascript">Planned Load</option>
+                        <option value="css">CSS</option>
+                        <option value="html">HTML</option>
+                        <option value="csharp">C#</option>
+                        <option value="java">Java</option>
+                    </select>
+
+                    <label for="inputDatetime">Start Date-Time*</label>
+                    <input type="datetime" name="inputDatetime" id="inputDatetime" value="" data-clear-btn="true" placeholder="">
+
+                    <label for="inputDatetime">Expected End Date-Time*</label>
+                    <input type="datetime" name="inputDatetime" id="inputDatetime" value="" data-clear-btn="true" placeholder="">
+
+					<label for="textarea2b">Remark</label>
+	                <textarea cols="40" rows="8" name="textarea2" id="textarea2b" placeholder="This is a textarea"></textarea>
+
+	                <input class="ui-btn clr-primary" type="submit" name="submit" value="submit" >
+					
+				</form>
+
+			</div>
+
+		</div>		
+
+		<script src="js/jquery.min.js"></script>
+		
+
+		
+<script>
+
+$(document).on('pageinit',  function()
+	{
+	session_id_result1= localStorage.getItem("session_id_result1");
+	//alert(session_id_result1);
+	if(session_id_result1 != undefined)	
+	{
+		//alert('changing page');
+		//$.mobile.changePage( "main.html",null, true, true);
+	}
+
+			$(document).on('click', '#submit_login2', function(e) 
+			{ // catch the form's submit event
+			
+				//alert('login click');
+				console.log('login click');
+				if(e.handled !== true) // This will prevent event triggering more then once
+				{
+					
+					var username = $("#username2").val();
+					var password = $("#password").val();
+				
+					console.log('username');
+					console.log(username);
+					
+					console.log('password');
+					console.log(password)
+					
+					if( username == '' )
+					{
+						$("#msg").html('Enter Username').show();
+						
+						return false;
+					}
+					else
+					{
+						$("#msg").hide();
+					}
+					
+					if( password == '' )
+					{
+						
+						$("#msg").html('Enter Password').show();
+						
+						return false;
+					}
+					else
+					{
+						$("#msg").hide();
+					}					
+					
+					
+					if($('#username2').val().length > 0 && $('#password').val().length > 0 )
+					{
+							
+							
+							purl = 'http://localhost/discom/t.php';
+							url = 'http://mobileapp.mahadiscom.in/Emp_App_Request/GetEmpLogin/';
+							
+							console.log(url);//return false;
+							
+							var appname = "EMPAPP";
+							
+							//username = '02620651' ;
+							//password = 'Password@123' ;
+							
+							$.ajax({
+								url: purl,
+								data: {url: url, login: username, password: password, appname: appname},
+								type: 'post',                   
+								async: 'true',
+								dataType: 'json',
+								beforeSend: function() {
+									// This callback function will trigger before data is sent
+									//$.mobile.showPageLoadingMsg(true); // This will show ajax spinner
+									//$.mobile.loading( "show" );
+									alert('before');
+								},
+								complete: function() {
+									// This callback function will trigger on data sent/received complete
+								   // $.mobile.hidePageLoadingMsg(); // This will hide ajax spinner
+									//$.mobile.loading( "hide" );
+									alert('complete');
+								},
+								success: function (result) {
+									console.log('aa');
+									alert('success');
+									//alert("login done");
+
+									if(result.ResponseStatus == 'SUCCESS') 
+									{
+										//$.mobile.loading( "hide" );
+										//alert('ok');
+										//alert(result.status);
+										//alert(result.message);
+										//$.mobile.changePage( "#login",null, true, true);
+										//return false;
+										//alert(username);
+										//$('#username2').val(username);
+										//showMessage(result.message,null,appname,'OK');
+										alert("Login done");
+
+										localStorage.setItem("session_id_local", username);
+
+										result_string = JSON.stringify(result.UserDetails);
+
+										alert(result_string);
+
+										localStorage.setItem("session_id_result1", result_string);
+
+									
+										var test2 = localStorage.getItem("session_id_result1");
+										//alert(test2);
+										test = JSON.parse(test2); //var test is now re-loaded!
+
+										//alert(test.length);
+										//for(j = 0; j<test.length; j++)
+										//{
+											alert(test.OfficerName);
+										//}
+										$.mobile.changePage( "#main",null, true, true);
+										//$(":mobile-pagecontainer").pagecontainer("change", "main.html", { options });
+										
+									} else 
+									{
+										//alert(result.message);
+										//$.mobile.loading( "hide" );								
+										//showMessage(result.message,null,appname,'OK');
+										alert('Logon unsuccessful!');
+									}
+								},
+								error: function (request,error) {
+									// This callback function will trigger on unsuccessful action                
+									console.log('Please check your data connection!');
+								}
+							});  
+							
+						} else {
+							console.log('Please fill all necessary fields');
+							
+							//$( "[data-role='navbar']" ).navbar();
+							//$( "[data-role='header'], [data-role='footer']" ).toolbar();
+							//$( "[data-role='footer']" ).toolbar( "refresh" );
+							//alert('Please fill all necessary fields');
+							return false;
+							//$.fixedToolbars.show();
+							//$.mobile.loading( "show" );
+								
+						}    
+					
+					e.handled = true;
+				}
+				
+				return false; // cancel original event to prevent form submitting
+			});    
+		
+
+});
+		
+		</script>
+		
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery.mobile.min.js"></script>
+		<script src="vendor/waves/waves.min.js"></script>
+		<script src="vendor/wow/wow.min.js"></script>
+		<script src="js/nativedroid2.js"></script>
+		<script src="nd2settings.js"></script>
+		
+		
+
+	</body>
+</html>
